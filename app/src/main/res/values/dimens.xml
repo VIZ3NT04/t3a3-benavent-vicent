@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_padding_min">16</dimen>
+    <dimen name="common_padding_default">16</dimen>
+    <dimen name="card_img_size">88</dimen>
+</resources>
