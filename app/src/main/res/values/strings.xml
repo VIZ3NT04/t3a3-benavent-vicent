@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">t3a3-benavent-vicent3</string>
+    <string name="globalPosition">POSICION GLOBAL</string>
+    <string name="movimientos">MOVIMIENTOS</string>
+    <string name="transferencia">TRANSFERENCIA</string>
+    <string name="changePassword">CAMBIAR CONTRASEÑA</string>
+    <string name="promotions">PROMOCIONES</string>
+    <string name="cajeros">CAJEROS</string>
+    <string name="exitBank">SALIR</string>
 </resources>

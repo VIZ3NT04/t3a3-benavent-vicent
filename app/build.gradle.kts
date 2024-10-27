@@ -36,16 +36,12 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    viewBinding {
-        enable = true
-    }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation("com.google.android.material:material:1.9.0") // versión actualizada de Material Components
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
