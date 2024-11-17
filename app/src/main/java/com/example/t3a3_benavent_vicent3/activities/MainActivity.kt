@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.bancoapiprofe.pojo.Cliente
 import com.example.t3a3_benavent_vicent3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,9 +21,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val usuario = intent.getStringExtra("Usuario")
+        val cliente = intent.getSerializableExtra("Cliente") as Cliente
 
-        binding.benvingut.text = "Benvingut \n $usuario"
+        binding.benvingut.text = "Benvingut \n ${cliente.getNombre()}"
 
         binding.btnEntrarBanco7.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
