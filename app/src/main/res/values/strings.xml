@@ -7,4 +7,21 @@
     <string name="promotions">PROMOCIONES</string>
     <string name="cajeros">CAJEROS</string>
     <string name="exitBank">SALIR</string>
+    <string name="Salir" translatable="false" />
+    <string name="Cambiar" translatable="false">Cambiar</string>
+    <string name="cambiar_contrase_a" translatable="false">Cambiar Contraseña</string>
+    <string name="nueva_contrase_a" translatable="false">Nueva Contraseña</string>
+    <string name="repetir_contrase_a" translatable="false">Repetir Contraseña</string>
+    <string name="cuentas">Cuentas:</string>
+    <string name="posicion_globall">POSICION GLOBAL</string>
+    <string name="movimientoss">MOVIMIENTOS</string>
+    <string name="selecciona_una_cuenta">Seleccione una cuenta:</string>
+    <string name="ultimos_movimientos">Ultimos movimientos:</string>
+    <string name="lo_que_sea">lo que sea XDDDDD</string>
+    <string-array name="cuentas">
+        <item>ES-6723-4626-9013</item>
+        <item>ES-8909-2723-2367</item>
+        <item>ES-9120-3255-3242</item>
+        <item>ES-4793-3256-9765</item>
+    </string-array>
 </resources>

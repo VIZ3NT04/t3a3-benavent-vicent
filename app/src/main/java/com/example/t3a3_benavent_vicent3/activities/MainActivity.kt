@@ -8,6 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bancoapiprofe.pojo.Cliente
+import com.example.t3a3_benavent_vicent3.activities.ChangePasswordActivity
+import com.example.t3a3_benavent_vicent3.activities.GlobalPositionActivity
+import com.example.t3a3_benavent_vicent3.activities.MovementsActivity
+import com.example.t3a3_benavent_vicent3.activities.TransferActivity
 import com.example.t3a3_benavent_vicent3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +34,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnEntrarBanco4.setOnClickListener {
+            val intent = Intent(this, ChangePasswordActivity::class.java)
+            intent.putExtra("Cliente", cliente)
+            startActivity(intent)
+        }
+
+        binding.btnEntrarBanco3.setOnClickListener {
+            val intent = Intent(this, TransferActivity::class.java)
+            //intent.putExtra("Cliente", cliente)
+            startActivity(intent)
+        }
+        binding.btnEntrarBanco1.setOnClickListener {
+            val intent = Intent(this, GlobalPositionActivity::class.java)
+            intent.putExtra("Cliente", cliente)
+            startActivity(intent)
+        }
+
+        binding.btnEntrarBanco2.setOnClickListener {
+            val intent = Intent(this, MovementsActivity::class.java)
+            intent.putExtra("Cliente", cliente)
+            startActivity(intent)
+        }
         enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

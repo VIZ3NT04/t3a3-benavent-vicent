@@ -2,7 +2,7 @@ package com.example.bancoapiprofe.pojo
 
 import java.io.Serializable
 
-class Cuenta : Serializable {
+class  Cuenta : Serializable {
     private var id = 0
     private var banco: String? = null
     private var sucursal: String? = null

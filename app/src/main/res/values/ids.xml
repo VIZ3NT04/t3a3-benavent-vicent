@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvTransferencia" type="id" />
+    <item name="tvEligeCuenta" type="id" />
+    <item name="tvCantidad" type="id" />
+    <item name="rgTipoCuenta" type="id" />
+    <item name="spCuenta" type="id" />
+    <item name="spCuentaPropia" type="id" />
+    <item name="etCantidadAjena" type="id" />
+    <item name="rdCuentaPropia" type="id" />
+    <item name="rdCuentaAjena" type="id" />
+    <item name="etCantidad" type="id" />
+    <item name="cbEnviarJustificante" type="id" />
+    <item name="btEnviar" type="id" />
+    <item name="btCancelar" type="id" />
+</resources>
