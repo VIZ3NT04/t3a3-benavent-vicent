@@ -24,4 +24,6 @@
         <item>ES-9120-3255-3242</item>
         <item>ES-4793-3256-9765</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
