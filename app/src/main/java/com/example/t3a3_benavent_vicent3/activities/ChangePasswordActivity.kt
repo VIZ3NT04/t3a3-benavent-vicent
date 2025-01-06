@@ -9,11 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.bancoapiprofe.bd.MiBancoOperacional
 import com.example.bancoapiprofe.pojo.Cliente
-import com.example.t3a3_benavent_vicent3.LoginActivity
-import com.example.t3a3_benavent_vicent3.MainActivity
 import com.example.t3a3_benavent_vicent3.R
 import com.example.t3a3_benavent_vicent3.databinding.ActivityChangePasswordBinding
-import com.example.t3a3_benavent_vicent3.databinding.ActivityMainBinding
 
 class ChangePasswordActivity : AppCompatActivity() {
 

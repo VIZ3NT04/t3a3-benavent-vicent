@@ -1,67 +1,77 @@
-package com.example.t3a3_benavent_vicent3
+package com.example.t3a3_benavent_vicent3.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.bancoapiprofe.pojo.Cliente
-import com.example.t3a3_benavent_vicent3.activities.ChangePasswordActivity
-import com.example.t3a3_benavent_vicent3.activities.GlobalPositionActivity
-import com.example.t3a3_benavent_vicent3.activities.MovementsActivity
-import com.example.t3a3_benavent_vicent3.activities.TransferActivity
-import com.example.t3a3_benavent_vicent3.databinding.ActivityMainBinding
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.core.view.GravityCompat
+import com.example.t3a3_benavent_vicent3.LoginActivity
+import com.example.t3a3_benavent_vicent3.R
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+
+    private lateinit var drawerLayout: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
+        // Configurar Toolbar
+        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        // Configurar DrawerLayout
+        drawerLayout = findViewById(R.id.main)
+        val navView: NavigationView = findViewById(R.id.nav_view)
 
+        // Toggle para abrir y cerrar el Drawer
+        val toggle = ActionBarDrawerToggle(
+            this,
+            drawerLayout,
+            toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-        val cliente = intent.getSerializableExtra("Cliente") as Cliente
-
-        binding.benvingut.text = "Benvingut \n ${cliente.getNombre()}"
-
-        binding.btnEntrarBanco7.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        // Manejar clics en los ítems del NavigationView
+        navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_home -> {
+                    val intent = Intent(this, TransferActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_settings -> {
+                    val intent = Intent(this, ChangePasswordActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_share -> {
+                    val intent = Intent(this, MovementsActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_about -> {
+                    val intent = Intent(this, GlobalPositionActivity::class.java)
+                    startActivity(intent)
+                }
+                R.id.nav_logout -> {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+            drawerLayout.closeDrawers()
+            true
         }
+    }
 
-        binding.btnEntrarBanco4.setOnClickListener {
-            val intent = Intent(this, ChangePasswordActivity::class.java)
-            intent.putExtra("Cliente", cliente)
-            startActivity(intent)
+    override fun onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
         }
-
-        binding.btnEntrarBanco3.setOnClickListener {
-            val intent = Intent(this, TransferActivity::class.java)
-            //intent.putExtra("Cliente", cliente)
-            startActivity(intent)
-        }
-        binding.btnEntrarBanco1.setOnClickListener {
-            val intent = Intent(this, GlobalPositionActivity::class.java)
-            intent.putExtra("Cliente", cliente)
-            startActivity(intent)
-        }
-
-        binding.btnEntrarBanco2.setOnClickListener {
-            val intent = Intent(this, MovementsActivity::class.java)
-            intent.putExtra("Cliente", cliente)
-            startActivity(intent)
-        }
-        enableEdgeToEdge()
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-
     }
 }

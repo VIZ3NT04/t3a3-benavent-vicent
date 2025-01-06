@@ -41,6 +41,7 @@ android {
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+    implementation("androidx.core:core-ktx:1.12.0") // Verifica si tienes la versión más reciente
     implementation("com.google.android.material:material:1.9.0") // versión actualizada de Material Components
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)

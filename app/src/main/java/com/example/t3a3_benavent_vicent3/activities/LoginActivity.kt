@@ -1,14 +1,13 @@
 package com.example.t3a3_benavent_vicent3
 
+import com.example.t3a3_benavent_vicent3.activities.MainActivity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import com.example.bancoapiprofe.bd.MiBancoOperacional
 import com.example.bancoapiprofe.pojo.Cliente
 import com.example.t3a3_benavent_vicent3.databinding.ActivityLoginBinding
@@ -45,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 binding.layaoutPass.error = null
             }
 
-            // Si ambos campos están completos, inicia la MainActivity
+            // Si ambos campos están completos, inicia la com.example.t3a3_benavent_vicent3.activities.MainActivity
             if (!usuario.isNullOrEmpty() && !contrasena.isNullOrEmpty()) {
                 */
                     val mbo:MiBancoOperacional? = MiBancoOperacional.getInstance(this)

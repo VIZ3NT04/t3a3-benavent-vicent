@@ -37,7 +37,7 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.t3a3_benavent_vicent3.activities.MainActivity"
             android:exported="false" />
     </application>
 

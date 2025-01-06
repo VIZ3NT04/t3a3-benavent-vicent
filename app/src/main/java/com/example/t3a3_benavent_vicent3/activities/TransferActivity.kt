@@ -7,7 +7,6 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.CheckBox
 import android.widget.EditText
-import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.Toast
@@ -15,12 +14,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.bancoapiprofe.bd.MiBancoOperacional
-import com.example.bancoapiprofe.pojo.Cliente
-import com.example.t3a3_benavent_vicent3.MainActivity
+
 import com.example.t3a3_benavent_vicent3.R
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.textfield.TextInputEditText
 
 class TransferActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

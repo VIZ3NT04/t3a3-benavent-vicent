@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">t3a3-benavent-vicent3</string>
+
+    <string name="open_nav" translatable="false">Open Navigation Drawer</string>
+    <string name="close_nav" translatable="false">Close Navigation Drawer</string>
+
+    <string name="navigation_drawer_open" translatable="false">Abrir menú</string>
+    <string name="navigation_drawer_close" translatable="false">Cerrar menú</string>
+
+
     <string name="globalPosition">POSICION GLOBAL</string>
     <string name="movimientos">MOVIMIENTOS</string>
     <string name="transferencia">TRANSFERENCIA</string>
