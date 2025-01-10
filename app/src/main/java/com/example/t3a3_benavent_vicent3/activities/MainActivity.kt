@@ -61,6 +61,11 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                 }
+                R.id.nav_ajustes -> {
+                    val intent = Intent(this, SettingsActivity::class.java)
+                    startActivity(intent)
+                }
+
             }
             drawerLayout.closeDrawers()
             true

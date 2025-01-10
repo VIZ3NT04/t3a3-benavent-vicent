@@ -45,6 +45,7 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0") // versión actualizada de Material Components
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.preference.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
