@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -39,6 +40,13 @@ android {
 }
 
 dependencies {
+
+    implementation(libs.androidx.room.common)
+    val roomVersion = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation("androidx.core:core-ktx:1.12.0") // Verifica si tienes la versión más reciente
@@ -46,6 +54,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.preference.ktx)
+    implementation(libs.androidx.room.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

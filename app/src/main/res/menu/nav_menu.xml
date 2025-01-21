@@ -24,6 +24,10 @@
             android:id="@+id/nav_ajustes"
             android:title="Setting"
             android:icon="@drawable/ic_launcher_foreground" />
+        <item
+            android:id="@+id/nav_cajeros"
+            android:title="ATM"
+            android:icon="@drawable/ic_launcher_foreground" />
 
     </group>
     <item
